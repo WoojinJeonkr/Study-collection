@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>적정 지출 비용의 초과 여부</title>
+    <!--진영이의 하루 지출 내역: 교통비 3000원, 식비 6000원, 음료비 3000원
+    삼항 조건 연산자를 사용하여 하루 적정 지출 비용인 1만원 초과 시 "OOO원 초과"라고 출력
+    아닐 경우 "돈 관리 잘했어요" 라고 출력"-->
+    <script>
+        var price1 = 3000;
+        var price2 = 6000;
+        var price3 = 3000;
+
+        day_price = (price1+price2+price3);
+        var result = day_price > 10000;
+        result = result ? (day_price-10000)+"원 초과" : "돈 관리 잘했어요!";
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

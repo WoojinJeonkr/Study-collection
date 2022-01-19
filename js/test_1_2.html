@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>4분기 판매량을 입력받아 평균 판매량과 비교하기</title>
+    <script>
+        // 1~3분기별 판매량 정보
+        var quarter1 = 1200;
+        var quarter2 = 1300;
+        var quarter3 = 1000;
+
+        // 4분기 판매량 입력 받기
+        var quarter4 = prompt("4분기 판매량은?","");
+
+        // 평균 판매량 계산
+        var q_avg = (quarter1+quarter2+quarter3)/3;
+
+        // 4분기와 평균 판매량 비교
+        var result = quarter4 >= q_avg;
+        result = result? "판매량이 평균 이상입니다." : "판매량이 평균 미달입니다.";
+        document.write("평균 판매량은 "+parseInt(q_avg)+"이며 4분기 "+result);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
