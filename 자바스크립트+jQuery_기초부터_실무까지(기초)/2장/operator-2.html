@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            var list = ""; // 문자열 타입
+            var num = 10; // Number 타입
+            // 복합 대입 연산자를 통하여 list 변수에 문자열을 누적하고 잇다.
+            list += "<ul>";
+            list += "   <li>안녕</li>";
+            list += "   <li>자바 스크립트</li>";
+            list += "</ul>";
+            // 정수형도 아래와 같이 복합 대입 연산을 통해서 값을 누적하고 있다.
+            num *= 10; num *= 10;
+            num *= 10; num *= 10;
+            // 문서에 출력하라.
+            // document.body.innerHTML = list;
+            document.body.innerHTML = num;
+        }
+    </script>
+</body>
+</html>
