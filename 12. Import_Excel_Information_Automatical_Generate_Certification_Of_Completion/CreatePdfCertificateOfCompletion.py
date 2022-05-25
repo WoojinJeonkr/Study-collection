@@ -23,7 +23,7 @@ print(name_list)
 print(birthday_list)
 print(ho_list)
 
-# 에게셀에서 읽은 이름 리스트의 길이(=수료증 수)만큼 반복
+# 엑셀에서 읽은 이름 리스트의 길이(=수료증 수)만큼 반복
 for i in range(len(name_list)):
     # 지정된 경로의 파일 읽기
     doc = docx.Document(r'12. Import_Excel_Information_Automatical_Generate_Certification_Of_Completion\수료증양식.docx')
