@@ -2,7 +2,10 @@ const express = require('express')
 const app = express()
 const port = 5000
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+
+const config = require('./config/key')
+
+const { User } = require("./models/User")
 
 //application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({extended: true}));
@@ -10,12 +13,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 //application/json
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://<username>:<password>@test.ipner.mongodb.net/?retryWrites=true&w=majority', {
+const mongoose = require('mongoose');
+mongoose.connect(config.mongoURI, {
     useNewUrlParser:true, useUnifiedTopology: true.valueOf, useCreateIndex: true, useFindandModify: false
 }).then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))
 
-  app.get('/register', (req, res) => {res.send('Hello World!~안녕하세요~')})
+  app.get('/register', (req, res) => {res.send('Hello World!~안녕하세요~ nodemon으로 연결!!')})
 
   app.post('/register',(req, res) => {
     // 회원가입 시 필요한 정보들을 client에서 가져오면
