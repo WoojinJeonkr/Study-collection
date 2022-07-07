@@ -19,7 +19,7 @@ mongoose.connect(config.mongoURI, {
 }).then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))
 
-  app.get('/register', (req, res) => {res.send('Hello World!~안녕하세요~ nodemon으로 연결!!')})
+  app.get('/register', (req, res) => {res.send('Hello World!~안녕하세요~ nodemon 연결 성공!!')})
 
   app.post('/register',(req, res) => {
     // 회원가입 시 필요한 정보들을 client에서 가져오면
