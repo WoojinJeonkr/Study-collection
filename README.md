@@ -8,7 +8,7 @@
 ### postman
 개발한 API를 테스트하고, 테스트 결과를 공유하여 API 개발의 생산성을 높여주는 플랫폼   
 postman을 통해 페이지 전송이 제대로 이루어지는지 테스트해볼 수 있다
-![postman](https://github.com/WoojinJeonkr/Node-React/blob/main/image/postman_test.png?raw=true){: width="400" height="300"}
+![postman](https://github.com/WoojinJeonkr/Node-React/blob/main/image/postman_test.png?raw=true)  
 
 ### nodemon
 평소 페이지 수정 시 서버 실행 > 종료 > 페이지 수정 > 서버 실행의 절차를 거치지만   
