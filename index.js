@@ -1,26 +1,28 @@
-const express = require('express')
-const app = express()
-const port = 5000
+const express = require('express');
+const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const config = require('./config/dev');
+const config = require('./config/key');
+const app = express();
+const port = 5000;
 const { auth } = require('./middleware/auth');
 const { User } = require("./models/User");
 
 //application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 //application/json
-app.use(bodyParser.json());
+app.use(bodyParser.json({ extended: true }));
 app.use(cookieParser());
 
-const mongoose = require('mongoose');
-mongoose.connect(config.mongoURI, {
-    useNewUrlParser:true, useUnifiedTopology: true.valueOf, useCreateIndex: true, useFindandModify: false
-}).then(() => console.log('MongoDB Connected...'))
-  .catch(err => console.log(err))
+// connect mongoDB
+mongoose.connect(config.mongoURI)
+.then(() => console.log('MongoDB Connected...'))
+.catch(err => console.log(err))
 
-app.get('/', (req, res) => {res.send('Hello World!~안녕하세요~ nodemon 연결 성공!!')})
+app.get('/', (req, res) => {
+  res.send('Hello World!~안녕하세요~ nodemon 연결 성공!!');
+})
 
 app.post('/api/users/register',(req, res) => {
   // 회원가입 시 필요한 정보들을 client에서 가져오면
@@ -28,7 +30,7 @@ app.post('/api/users/register',(req, res) => {
 
   const user = new User(req.body)
 
-  user.save((err, doc) => {
+  user.save((err, userInfo) => {
     if(err) return res.json({ success: false, err})
     return res.status(200).json({
       success: true
@@ -51,7 +53,10 @@ app.post('/api/users/login', (req, res) => {
     // 2. 요청된 이메일이 데이터베이스에 있다면 비밀번호가 맞는 비밀번호인지 확인
     user.comparePassword(req.body.password, (err, isMatch) => {
       if(!isMatch)
-        return res.json({ loginSuccess: false, message: "비밀번호가 틀렸습니다."})
+        return res.json({ 
+          loginSuccess: false, 
+          message: "비밀번호가 틀렸습니다."
+        })
 
       // 3. 비밀번호까지 맞다면 토큰 생성하기
       user.generateToken((err, user) => {
@@ -92,4 +97,6 @@ app.get('/api/users/logout', auth, (req, res) => {
     })
 })
 
-app.listen(port, () => {console.log('Example app listening on port ${port}!')})
+app.listen(port, () => {
+  console.log('Example app listening on port ${port}!')
+});
