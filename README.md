@@ -9,6 +9,12 @@
 ---
 
 ## 학습 내용
+
+### Node.js
+확장성 있는 네트워크 애플리케이션 개발에 사용되는 소프트웨어 플랫폼   
+작성 언어로 자바스크립트 활용   
+논블로킹 I/O와 단일 스레드 이벤트 루프를 통한 높은 처리 성능을 가짐   
+
 ### postman
 개발한 API를 테스트하고, 테스트 결과를 공유하여 API 개발의 생산성을 높여주는 플랫폼   
 postman을 통해 페이지 전송이 제대로 이루어지는지 테스트해볼 수 있다
@@ -33,6 +39,10 @@ Java, Node.js, Python등 여러 언어를 지원하는 클라우드 Paas
 설치 방법: npm install cookie-parser --save
 요청된 쿠키를 쉽게 추출할 수 있도록 도와주는 미들웨어
 
+### React.js
+자바스크립트 라이브러리의 하나로서 사용자 인터페이스를 만들기 위해 사용   
+싱글 페이지 애플리케이션이나 모바일 애플리케이션 개발에 사용 가능
+
 ---
 
 ## Error List
@@ -56,3 +66,8 @@ Java, Node.js, Python등 여러 언어를 지원하는 클라우드 Paas
 4. MongoDB 연결 오류 [2022-07-08]   
 내용: 코드 오류   
 해결: userSchema.this.password -> this.password로 수정
+
+5. 'Switch' is not exported from 'react-router-dom' [2022-07-09]   
+내용: react-router-dom 버전 5의 코드로 작성하여 발생하는 오류   
+해결: react-router-dom이 버전 6로 업그레이드되면서 switch를 지원하지 않고   
+Switch -> routes, component -> element로 변경되었으므로 해당 부분 코드 변경
