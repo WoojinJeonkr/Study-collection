@@ -43,6 +43,11 @@ Java, Node.js, Python등 여러 언어를 지원하는 클라우드 Paas
 자바스크립트 라이브러리의 하나로서 사용자 인터페이스를 만들기 위해 사용   
 싱글 페이지 애플리케이션이나 모바일 애플리케이션 개발에 사용 가능
 
+### concurrently   
+concurrently package를 다운받아 Node.js 서버와 React 서버를 동시에 실행 가능   
+작성 스크립트: "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\""
+실행 방법: Terminal에서 npm run dev
+
 ---
 
 ## Error List
