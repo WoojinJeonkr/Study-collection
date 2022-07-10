@@ -72,7 +72,6 @@ concurrently package를 다운받아 Node.js 서버와 React 서버를 동시에
 내용: 코드 오류   
 해결: userSchema.this.password -> this.password로 수정
 
-5. 'Switch' is not exported from 'react-router-dom' [2022-07-09]   
+5. 'Switch' is not exported from 'react-router-dom' [2022-07-09, 2022-07-10]   
 내용: react-router-dom 버전 5의 코드로 작성하여 발생하는 오류   
-해결: react-router-dom이 버전 6로 업그레이드되면서 switch를 지원하지 않고   
-Switch -> routes, component -> element로 변경되었으므로 해당 부분 코드 변경
+해결: react-router-dom이 버전 5로 설치 변경
