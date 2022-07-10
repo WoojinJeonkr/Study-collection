@@ -69,9 +69,13 @@ concurrently package를 다운받아 Node.js 서버와 React 서버를 동시에
 해결: 해당 부분 삭제 후 실행
 
 4. MongoDB 연결 오류 [2022-07-08]   
-내용: 코드 오류   
+원인: 코드 오류   
 해결: userSchema.this.password -> this.password로 수정
 
 5. 'Switch' is not exported from 'react-router-dom' [2022-07-09, 2022-07-10]   
-내용: react-router-dom 버전 5의 코드로 작성하여 발생하는 오류   
+원인: react-router-dom 버전 5의 코드로 작성하여 발생하는 오류   
 해결: react-router-dom이 버전 5로 설치 변경
+[2022-07-11] react-router-dom 버전 6 재설치
+
+6. Auth 적용 부분 적용 안됨 [2022-07-11]
+내용: 로그인 후 로그인 페이지, 회원가입 페이지로 이동되지 못하도록 작성했지만 현재 이동되는 상태
