@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { registerUser } from '../../../_actions/user_action';
-import { withRouter } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-function RegisterPage(props) {
+function RegisterPage() {
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const [Email, setEmail] = useState("")
   const [Name, setName] = useState("")
@@ -45,7 +46,7 @@ function RegisterPage(props) {
     dispatch(registerUser(body))
         .then(response => {
           if(response.payload.success) {
-            props.history.push('/login')
+            navigate('/login')
           } else {
             alert('Failed to sign up')
           }
@@ -81,4 +82,4 @@ function RegisterPage(props) {
   )
 }
 
-export default withRouter(RegisterPage)
+export default RegisterPage
