@@ -1,9 +1,9 @@
 import React from "react";
 
 import {
-  BrowserRouter,
-  Route,
-  Routes
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from "react-router-dom";
 
 import LandingPage from './components/views/LandingPage/LandingPage'
@@ -12,13 +12,13 @@ import RegisterPage from './components/views/RegisterPage/RegisterPage'
 
 function App() {
   return (
-    <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element = {<LandingPage/>}/>
-          <Route exact path="/login" element = {<LoginPage/>}/>
-          <Route exact path="/register" element = {<RegisterPage/>}/>
-        </Routes>
-    </BrowserRouter>
+    <Router>
+        <Switch>
+          <Route exact path="/" component = {LandingPage} />
+          <Route exact path="/login" component = {LoginPage} />
+          <Route exact path="/register" component = {RegisterPage} />
+        </Switch>
+    </Router>
   );
 }
 

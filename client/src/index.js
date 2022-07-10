@@ -4,19 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
-import 'antd/dist/antd.css';
-import { applyMiddleware, createStore } from 'redux';
+import 'antd/dist/antd.min.css';
+import { applyMiddleware, legacy_createStore as createStore } from 'redux';
 import promiseMiddleware from 'redux-promise';
 import ReduxThunk from 'redux-thunk';
 import Reducer from './_reducers';
 
-const createStrorewithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
+const createStorewithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore)
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider
-      store={createStrorewithMiddleware(Reducer,
-          window._REDUX_DEVTOOLS_EXTENSION__ &&
-          window._REDUX_DEVTOOLS_EXTENSION__()
+      store={createStorewithMiddleware(Reducer, 
+        window._REDUX_DEVTOOLS_EXTENSION__ && 
+        window._REDUX_DEVTOOLS_EXTENSION__()
       )}
   >
     <App />
