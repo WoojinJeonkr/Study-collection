@@ -1,4 +1,4 @@
-package com.member.demo.Repository;
+package com.member.Repository;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -7,8 +7,8 @@ import java.util.List;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
-import com.member.demo.domain.Member;
-import com.member.demo.repository.MemoryMemberRepository;
+import com.member.domain.Member;
+import com.member.repository.MemoryMemberRepository;
 
 public class MemoryMemberRepositoryTest {
 	

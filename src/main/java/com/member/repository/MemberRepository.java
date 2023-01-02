@@ -1,9 +1,9 @@
-package com.member.demo.repository;
+package com.member.repository;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.member.demo.domain.Member;
+import com.member.domain.Member;
 
 
 public interface MemberRepository {
