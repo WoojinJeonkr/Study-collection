@@ -1,2 +1,2 @@
-export * from "./view";
+export * from "../..";
 export { default as LayoutForm } from "./LayoutForm";

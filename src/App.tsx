@@ -1,4 +1,4 @@
-import { RoutesMap } from "components/router";
+import RoutesMap from "components/router/RoutesMap";
 import React from "react";
 
 function App() {

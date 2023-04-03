@@ -1,6 +1,7 @@
-import { Breadcrumb, Layout } from "antd";
+/* eslint-disable react/jsx-no-comment-textnodes */
+import { Layout } from "antd";
 import React from "react";
-import { RoutesMap } from "components/router";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 interface Props {
@@ -11,13 +12,6 @@ function ContentForm(props: Props) {
   const { Content, Sider } = Layout;
   return (
     <Content style={{ padding: "0 30px", height: window.innerHeight }}>
-      <Breadcrumb
-        style={{ marginTop: "16px", marginBottom: "16px", marginLeft: "90%" }}
-      >
-        <Breadcrumb.Item>Home</Breadcrumb.Item>
-        <Breadcrumb.Item>List</Breadcrumb.Item>
-        <Breadcrumb.Item>App</Breadcrumb.Item>
-      </Breadcrumb>
       <Layout
         style={{
           padding: "24px 0",
@@ -30,7 +24,7 @@ function ContentForm(props: Props) {
             padding: "0 24px",
           }}
         >
-          <RoutesMap />
+          <Outlet />
         </Content>
       </Layout>
     </Content>
