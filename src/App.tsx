@@ -27,8 +27,8 @@ const sidebarItem: MenuProps["items"] = [
     icon: React.createElement(icon),
     label: `subnav ${key}`,
 
-    children: new Array(3).fill(null).map((_, j) => {
-      const subKey = index * 3 + j + 1;
+    children: new Array(2).fill(null).map((_, j) => {
+      const subKey = index * 2 + j + 1;
       return {
         key: subKey,
         label: `option${subKey}`,
@@ -45,16 +45,26 @@ const App: React.FC = () => {
   return (
     <Layout style={{ height: window.innerHeight }}>
       <Header className="header">
-        <div className="logo" />
+        <div
+          style={{
+            float: "left",
+            width: "180px",
+            height: "31px",
+            margin: "16px 24px 16px 0",
+            background: "rgba(255, 255, 255, 0.3)",
+          }}
+        />
         <Menu
           theme="dark"
           mode="horizontal"
-          defaultSelectedKeys={["2"]}
+          defaultSelectedKeys={["1"]}
           items={navItem}
         />
       </Header>
       <Content style={{ padding: "0 30px", height: window.innerHeight }}>
-        <Breadcrumb style={{ margin: "16px 0" }}>
+        <Breadcrumb
+          style={{ marginTop: "16px", marginBottom: "16px", marginLeft: "90%" }}
+        >
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
           <Breadcrumb.Item>App</Breadcrumb.Item>
@@ -70,6 +80,7 @@ const App: React.FC = () => {
               mode="inline"
               defaultSelectedKeys={["1"]}
               defaultOpenKeys={["sub1"]}
+              style={{ height: "530px" }}
               items={sidebarItem}
             />
           </Sider>
