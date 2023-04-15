@@ -1,5 +1,6 @@
-import RoutesMap from "components/router/RoutesMap";
+import { RoutesMap } from "components";
 import React from "react";
+import "./assets/css/layout.css";
 
 function App() {
   return <RoutesMap />;
