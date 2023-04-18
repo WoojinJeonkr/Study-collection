@@ -17,6 +17,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "storybook": "yarn run storybook",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,5 +40,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^7.0.5",
+    "@storybook/addon-knobs": "^7.0.0",
+    "@storybook/addon-links": "^7.0.5",
+    "@storybook/addon-viewport": "^7.0.5",
+    "@storybook/preset-create-react-app": "^7.0.5",
+    "@storybook/react": "^7.0.5",
+    "ts-loader": "^9.4.2"
   }
 }
