@@ -10,23 +10,36 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "init": "^0.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "sb": "^7.0.5",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "storybook": "yarn run storybook",
+    "storybook": "storybook dev -p 6006",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -42,12 +55,29 @@
     ]
   },
   "devDependencies": {
+    "@babel/generator": "^7.21.4",
+    "@babel/parser": "^7.21.4",
+    "@storybook/addon-a11y": "^7.0.5",
     "@storybook/addon-actions": "^7.0.5",
+    "@storybook/addon-docs": "^7.0.5",
+    "@storybook/addon-essentials": "7.0.5",
+    "@storybook/addon-interactions": "7.0.5",
     "@storybook/addon-knobs": "^7.0.0",
     "@storybook/addon-links": "^7.0.5",
     "@storybook/addon-viewport": "^7.0.5",
+    "@storybook/blocks": "7.0.5",
+    "@storybook/builder-vite": "^7.0.5",
+    "@storybook/cli": "^7.0.5",
     "@storybook/preset-create-react-app": "^7.0.5",
     "@storybook/react": "^7.0.5",
-    "ts-loader": "^9.4.2"
+    "@storybook/react-vite": "^7.0.5",
+    "@storybook/react-webpack5": "7.0.5",
+    "@storybook/testing-library": "0.0.14-next.2",
+    "babel-plugin-named-exports-order": "0.0.2",
+    "prop-types": "15.8.1",
+    "storybook": "7.0.5",
+    "storybook-addon-next-router": "^4.0.2",
+    "ts-loader": "^9.4.2",
+    "webpack": "5.79.0"
   }
 }
