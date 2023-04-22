@@ -1,5 +1,5 @@
 import React from 'react';
-import './button.css';
+import './StorybookButton.css';
 
 interface ButtonProps {
   /**
@@ -27,7 +27,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+const StorybookButton = ({
   primary = false,
   size = 'medium',
   backgroundColor,
@@ -46,3 +46,5 @@ export const Button = ({
     </button>
   );
 };
+
+export default StorybookButton;

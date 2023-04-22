@@ -1,18 +1,17 @@
 import React from 'react';
-
-import { Header } from './Header';
-import './page.css';
+import './StorybookPage.css';
+import { StorybookHeader } from '../sbheader';
 
 type User = {
   name: string;
 };
 
-export const Page: React.FC = () => {
+const StorybookPage: React.FC = () => {
   const [user, setUser] = React.useState<User>();
 
   return (
     <article>
-      <Header
+      <StorybookHeader
         user={user}
         onLogin={() => setUser({ name: 'Jane Doe' })}
         onLogout={() => setUser(undefined)}
@@ -71,3 +70,5 @@ export const Page: React.FC = () => {
     </article>
   );
 };
+
+export default StorybookPage;

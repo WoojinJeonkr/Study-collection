@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "noImplicitAny": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -20,5 +21,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src/**/*", ".storybook/**/*.ts", ".storybook/**/*.tsx", "App.tsx", "src/index.tsx", "src/react-app-env.d.ts"]
+  "include": ["src/**/*", ".storybook/**/*.ts", ".storybook/**/*.tsx", "App.tsx", "src/index.tsx", "src/react-app-env.d.ts"],
+  "exclude": ["./node_modules", "./public"]
 }
