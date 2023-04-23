@@ -5,12 +5,12 @@ import ToastUIEditor from '../ToastUIEditor';
 interface Props {
   content: string;
   onChange: (value: string) => void;
-  mode: string;
+  mode: boolean;
 }
 const ToastUIEditorView = ({content, onChange, mode} : Props) => {
 
   return (
-    mode === 'READ' ? (
+    mode ? (
       <ToastUIViewer
         initialValue={content}
       />
