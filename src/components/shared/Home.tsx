@@ -1,9 +1,12 @@
 import { Button, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
+  const navigate = useNavigate();
+
   const onMoveToastUIPage = () => {
-    window.location.href = "/toastui";
+    navigate("/toastui");
   }
 
   return (
@@ -14,7 +17,7 @@ const Home = () => {
       <Typography variant='h2'>
         Discover the Best Editors for Your React Projects
       </Typography>
-      <Button variant="contained" onChange={onMoveToastUIPage}>ToastUI Editor / Viewer</Button>
+      <Button variant="contained" onClick={onMoveToastUIPage}>ToastUI Editor / Viewer</Button>
     </div>
   );
 };
