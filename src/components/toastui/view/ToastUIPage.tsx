@@ -1,6 +1,7 @@
 import { Paper, Switch, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import React from 'react';
-import { ToastUIEditorView } from '../toastui';
+import '@toast-ui/editor/dist/toastui-editor.css';
+import ToastUIEditorView from './ToastUIEditorView';
 
 const ToastUIPage = () => {
   const [checked, setChecked] = React.useState<boolean>(false);
