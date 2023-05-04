@@ -9,6 +9,10 @@ const Home = () => {
     navigate("/toastui");
   }
 
+  const onMoveSlashPage = () => {
+    navigate("/slash");
+  }
+
   return (
     <div>
       <Typography variant='h1'>
@@ -18,6 +22,7 @@ const Home = () => {
         Discover the Best Editors for Your React Projects
       </Typography>
       <Button variant="contained" onClick={onMoveToastUIPage}>ToastUI Editor / Viewer</Button>
+      <Button variant="contained" onClick={onMoveSlashPage}>Slash library</Button>
     </div>
   );
 };
