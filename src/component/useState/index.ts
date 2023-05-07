@@ -1,1 +1,2 @@
-export { default as Example1 } from './Example1';
+export { default as UpdateClock } from './updateClock';
+export { default as UploadText } from './UploadText';

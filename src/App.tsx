@@ -1,5 +1,4 @@
-import './App.css';
-import { RouteMap } from './routes';
+import { RouteMap } from './component';
 
 function App() {
   return <RouteMap />;
