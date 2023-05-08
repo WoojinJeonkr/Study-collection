@@ -31,7 +31,7 @@ const Crawl =() => {
         Search
       </Typography>
       <Box display="flex" alignItems="center">
-        <FormControl fullWidth>
+        <FormControl size="small" fullWidth>
           <InputLabel>Select toss/library when you find...</InputLabel>
           <Select
             label="toss/library"
