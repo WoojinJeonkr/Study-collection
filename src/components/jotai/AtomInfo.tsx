@@ -1,21 +1,19 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
-import { Typography, Box, Button, Select, MenuItem, SelectChangeEvent, FormControl, InputLabel } from "@mui/material";
-import { useState } from "react";
-import { SlashLibrary } from "./LibraryList";
+import { Box, Button, TextField, Typography } from "@mui/material";
+import { ChangeEvent, useState } from "react";
 import HomeIcon from '@mui/icons-material/Home';
 import { useNavigate } from "react-router-dom";
 
-const Crawl =() => {
+const AtomInfo = () => {
   const [searchWord, setSearchWord] = useState<string>('');
   const [pageLink, setPageLink] = useState<string>('');
   const navigate = useNavigate();
   const handleSearch = async () => {
-    const findLibrary = SlashLibrary.filter(value => value.name === searchWord);
-    setPageLink(findLibrary.map(value => {return value.link})[0]);
+    setPageLink(`https://jotai.org/docs/core/${searchWord}`);
   };
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setSearchWord(event.target.value as string);
+  const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
+    setSearchWord(event.target.value);
   }
 
   const moveToHome = () => {
@@ -31,20 +29,7 @@ const Crawl =() => {
         Search
       </Typography>
       <Box display="flex" alignItems="center">
-        <FormControl fullWidth>
-          <InputLabel>Select toss/library when you find...</InputLabel>
-          <Select
-            label="toss/library"
-            value={searchWord}
-            onChange={handleChange}
-          >
-            {SlashLibrary.map((value) => {
-              return (
-                <MenuItem key={`toss-library-${value.id}`} value={value.name}>{value.name}</MenuItem>
-              )
-            })}
-          </Select>
-        </FormControl>
+        <TextField value={searchWord} placeholder="atom" onChange={handleInput} size="small" fullWidth />
         <Button variant="contained" color="primary" onClick={handleSearch}>
           Search
         </Button>
@@ -59,6 +44,6 @@ const Crawl =() => {
       )}
     </div>
   )
-}
+};
 
-export default Crawl;
+export default AtomInfo;
