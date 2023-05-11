@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import { Home } from '../pages';
+import { Home, UseStateMain } from '../pages';
 import App from '../../App';
 
 const RouteMap = createBrowserRouter([
@@ -10,7 +10,11 @@ const RouteMap = createBrowserRouter([
     children: [
       {
         path: 'home',
-        element: <Home />
+        element: <Home />,
+      },
+      {
+        path: 'useState',
+        element: <UseStateMain />
       }
     ]
   }

@@ -1,0 +1,43 @@
+@import "../../resets.module";
+
+.root {
+  background-color: floralwhite;
+  position: relative;
+  height: 112px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.drunk {
+  color: #426b1f;
+  font-size: 32px;
+  line-height: 100%;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.01em;
+  position: absolute;
+  left: 96px;
+  top: 41px;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.useState {
+  color: #000;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  right: 657px;
+  top: 45.5px;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+  cursor: pointer;
+}
