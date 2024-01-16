@@ -1,0 +1,5 @@
+a is first of Alphabet.
+a is small a, A is large a.
+Apple is fruit and it is red... but green apple is green.. well.. 
+Sometimes we see green apple in market.
+Some people like green apple, but.. many people like red apple.
