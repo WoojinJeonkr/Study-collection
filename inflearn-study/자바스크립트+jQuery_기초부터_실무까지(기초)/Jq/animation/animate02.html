@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 숨기기, 보이기</title>
+    <script src="libs/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // 글자 숨기기 버튼을 눌렀을 때
+            $("#showText").click(function(){
+                // div 영역의 내용을 숨긴다.
+                $("div").hide();
+            });
+            // 글자 보이기 버튼을 눌렀을 때
+            $("#hideText").click(function(){
+                // div 영역의 내용을 보인다.
+                $("div").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>안녕하세요. 좋은 하루되세요.</div>
+    <button id="showText">글자 숨기기</button>
+    <button id="hideText">글자 보이기</button>
+</body>
+</html>
