@@ -1,0 +1,72 @@
+# server
+server:
+  port: 9091
+  servlet:
+    context-path: /
+  encoding:
+    charset: utf-8
+    enabled: true
+    force: true
+
+# spring
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/board?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: develop
+    password: 4129
+  jpa:
+    database: mysql
+    open-in-view: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+    show-sql: true
+    properties:
+      show-sql: true
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    defer-datasource-initialization: true
+  
+  sql:
+    init:
+      mode: always
+      data-locations: classpath*:db/data.sql
+
+jwt:
+  header: Authorization
+  secret: anNoLXNwcmluZ2Jvb3QtYW5kLWp3dC10dXRvcmlhbC10aGlzLWlzLWZvci1nZW5lcmF0aW5nLWp3dC1zZWNyZXRrZXktYmFzZTY0Cg==
+  token-validity-in-seconds: 3600000
+  
+logging:
+  level:
+    org:
+      hibernate: info
+
+management:
+  endpoints:
+    web:
+      base-path: /application
+      path-mapping:
+        health: healthcheck
+  endpoint:
+    health:
+      show-details: always
+
+# springdoc
+springdoc:
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  version: '1.0.0'
+  api-docs:
+    groups:
+      enabled: true
+  swagger-ui:
+    operations-sorter: alpha
+    tags-sorter: alpha
+    enabled: true
+    path: '/api/api-docs.html'
+    try-it-out-enabled: false
+    disable-swagger-default-url: true
