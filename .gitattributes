@@ -1,1 +1,7 @@
 text=auto
+
+# Ignore Jupyter notebook linguist
+*.ipynb linguist-documentation
+
+# Ignore Html linguist
+*.html linguist-documentation
